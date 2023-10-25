@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="lab04.js"></script>
+    <style>
+        body {margin-left:10%; margin-right:10%; background-color: rgba(127, 255, 212, 0.528);}
+        form {margin: 5%;}
+    </style>
+</head>
+
+<body class="container">
+    <div class="col-lg-5">
+        <div>
+            <nav class="navbar"><h1>Woosung Kim - <b>Lab04</b></h1></nav>
+        </div>
+
+        <form class="text-center" style="margin-top: 100px;">
+            <div class="col-lg-12" style="margin:15px;">
+                <div class="col-lg-3">Name:</div>
+                <input type="text" id="fname"> 
+                <br>
+            </div>
+            
+            <div class="col-lg-12" style="margin:15px;">
+                <div class="col-lg-3">Address:</div>
+                <input type="text" id="faddress">
+                <br>
+            </div>
+
+            <div class="col-lg-12" style="margin:15px;">
+                <div class="col-lg-3">Phone:</div>
+                <input type="text" id="fphone">
+                <br>
+            </div>
+
+            <div>
+                <input type="button" value="Submit" onclick="formValid(document.getElementById('fname'), document.getElementById('faddress'), document.getElementById('fphone'))" style="width:60px; margin-top:15px;">
+            </div>
+        </form>
+
+        <div style="margin-left:110px">
+            <h3 id="userName"></h3>
+            <h3 id="userAddress"></h3>
+            <h3 id="userPhone"></h3>
+        </div>
+    </div>
+
+    <div class="col-lg-7">
+        <br>
+        <div class="col-lg-12 text-center" style="margin-top:90px">
+            <p>The following textbox counts the characters used:</p>
+            <h1 class="col-lg-2 " id="count1">0</h1>
+            <textarea class="col-lg-10 " id="Box1" rows="10" cols="40" onkeydown="count1()" onkeyup="count1()"></textarea>
+        </div>
+
+        <br>
+
+        <div class="col-lg-12 text-center" style="margin-top: 30px;">
+            <p>The following textbox counts only letters used:</p>
+            <h1 class="col-lg-2" id="count2">0</h1>
+            <textarea class="col-lg-10" id="Box2" rows="10" cols="40" onkeydown="count2()" onkeyup="count2()"></textarea>
+        </div>
+    </div>
+
+
+    <div class="col-lg-5 text-center">
+        <h2>Favourite sites:</h2>
+        <div class="text-center" style="margin: 20px;">
+
+            <img id="lock1">
+            <a href="http://testhtml5.vulnweb.com/" id="website1">http://testhtml5.vulnweb.com</a>
+            <br>
+
+            <img id="lock2">
+            <a href="https://www.youtube.com/" id="website2">https://www.youtube.com</a>
+            <br>
+
+            <img id="lock3">
+            <a href="https://www.instagram.com/?hl=en" id="website3">https://www.instagram.com</a>
+            <br>
+
+            <img id="lock4">
+            <a href="http://testaspnet.vulnweb.com/" id="website4">http://testaspnet.vulnweb.com</a>
+            <br>
+
+            <input class="text-center" style="margin-top:20px; margin-left:20px" type="button" onclick="checkAllSites()" value="Check Protocol">
+        </div>
+    </div>
+</body>
+</html>
